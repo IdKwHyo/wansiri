@@ -1,45 +1,69 @@
 # Wansiri Hospital — Gender Affirming Care
 
-Responsive editorial patient guide with expandable reading panels, a procedure comparison table, clinical gallery, and scroll-controlled ambient visuals.
+Portable copy of the website supplied by the owner:
+https://wansiri-gender-affirming-care.karndanai537.chatgpt.site/
 
-## Host the website
+The original public HTML, CSS, JavaScript, fonts and images were recovered on September 14, 2026. This is editable static source, with no install or build step, backend, API keys, or dependency on the old ChatGPT account.
 
-The deployable website is already in **`dist/`**. It is static HTML, CSS, JavaScript, fonts and images; it needs no application server, database, environment variables or API keys.
+## Preview locally
 
-Configure your static hosting service with:
+From this folder:
 
-| Setting | Value |
-| --- | --- |
-| Framework | None / static HTML |
-| Build command | Leave blank |
-| Publish / output directory | `dist` |
-| Entry point | `dist/index.html` |
-
-Serve `dist/` at the root of your domain. Asset paths start with `/`, so a subdirectory such as `example.com/wansiri-care/` requires updating those paths. Merely uploading the repository to GitHub does not enable website hosting.
-
-The `.openai/hosting.json` file belongs to the existing ChatGPT Sites deployment. It is not needed by another hosting provider and should not be copied into the public web root.
-
-## Local development
-
-Use Node.js 22.12+ or Node.js 24.
-
-```sh
-npm ci
-npm run dev
+```bash
+python3 -m http.server 8000 --directory dist
 ```
 
-Vite serves the existing `dist/` source files directly. Edit `dist/index.html`, `dist/editorial.css`, and `dist/app.js`. No build step is required. `/?review=mobile` is a development-only 390px iframe for responsive inspection; it is not part of the hosted static files.
+Open http://localhost:8000. On Windows, use `py` instead of `python3` if needed. Use an HTTP server rather than double-clicking index.html because the site uses JavaScript modules.
 
-## Motion and accessibility
+## Push to GitHub
 
-- One Lenis instance uses the GSAP ticker; touch scrolling remains native.
-- Three.js supplies a global decorative scene. Canvas 2D renders the same projected geometry if a WebGL context cannot be created.
-- Reduced-motion and reduced-transparency preferences are respected.
-- Expandable sections work without JavaScript. The clinical gallery opens separately from the bulk reading control.
-- All assets and dependencies are self-hosted. There are no analytics, forms or medical-data collection endpoints.
+Create an empty repository, open a terminal in this extracted folder, and run:
 
-## Content and assets
+```bash
+git init
+git add .
+git commit -m "Add Wansiri website"
+git branch -M main
+git remote add origin YOUR_GITHUB_REPOSITORY_URL
+git push -u origin main
+```
 
-Hospital-supplied photographs and the surgeon profile are under `dist/assets/`. Dependency licenses and provenance are retained under `dist/vendor/` and `dist/assets/fonts/`.
+Replace `YOUR_GITHUB_REPOSITORY_URL` with your repository's HTTPS URL. The ZIP contains no Git history, account credentials or ChatGPT project identity.
 
-The current page is a client-review version with `noindex,nofollow`. Medical review is not claimed; clinical copy, service availability, patient-image publication permission and final notices need hospital signoff before public release. Detailed editorial and validation notes are in `REVIEW.md`.
+## Host on Vercel
+
+Import your GitHub repository. Select **Other** as the framework if asked. The included `vercel.json` sets `dist` as the output directory and skips installation and building. No environment variables are required.
+
+Reference: [Vercel build configuration](https://vercel.com/docs/builds/configure-a-build) and [vercel.json settings](https://vercel.com/docs/project-configuration/vercel-json).
+
+## Host on GitHub Pages
+
+1. Push this folder to your repository, including `.github/workflows/pages.yml`.
+2. In repository **Settings → Pages**, choose **GitHub Actions** as the source.
+3. In **Actions**, select **Deploy static site to Pages** and run the workflow.
+
+The workflow publishes `dist`. It is manual so importing the repository alone does not trigger publication. Run it again after changes. Relative asset paths support both repository subpaths and custom domains.
+
+Reference: [GitHub Pages custom workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+
+## Edit the site
+
+| File | Purpose |
+| --- | --- |
+| `dist/index.html` | Page copy, sections, clinical gallery, contact links |
+| `dist/editorial.css` | Layout, colors, fonts and responsive styles |
+| `dist/app.js` | Navigation, disclosures, smooth scrolling and animation |
+| `dist/fabric-depth.js` | Original Three.js fabric scene |
+| `dist/fabric-fallback.js` | Original canvas fallback |
+| `dist/assets/` | Original images and both font styles |
+| `dist/vendor/` | Local GSAP, ScrollTrigger, Lenis and Three.js dependencies |
+
+Keep the `dist` folder tracked: it contains the editable website, not generated build output.
+
+## Fidelity and provenance
+
+All visible content and styling, including the hospital contact details, clinical-photo disclosure, animations, mobile navigation and reduced-motion behavior, are preserved. The only application-file adjustments are relative asset URLs and removal of the old host's injected Cloudflare challenge bootstrap, which is not part of the website's design or functionality.
+
+`source-manifest.json` records the original downloaded file hashes and these changes. This package recovers the published website; it does not claim to recover the other account's private repository or development history. The original `noindex,nofollow` metadata is preserved. If search-engine indexing is wanted, change that tag in `dist/index.html`.
+
+Original asset ownership and embedded third-party license notices remain unchanged. This package does not assign a new license to the hospital materials or vendor code.

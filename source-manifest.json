@@ -1,0 +1,38 @@
+{
+  "reference_url": "https://wansiri-gender-affirming-care.karndanai537.chatgpt.site/",
+  "retrieved_on": "2026-09-14",
+  "original_sha256": {
+    "fabric-depth.js": "e0c116abc820c384d87af817c30fd55e92a65279694cb2fe937cf2c7c8ceb6ee",
+    "index.html": "c3cbc1e30756cfd1dc3906dfce83cb33a04bc180a624fb03d5c603b1f7dc248d",
+    "app.js": "922526d384f4cc614f9053b8ee0e0c5be25b687c54cf99614a4c8b0d32d73501",
+    "fabric-fallback.js": "7a1415022cbc1ea2012a8fb6b55d115257a5e31708bdcbb1c736e057eab9f6d2",
+    "editorial.css": "9edd29d07ef760dafa96d953d8cf24dd01d5e1c842e17f1fb3237d7f8d90a605",
+    "vendor/ScrollTrigger.min.js": "8d6a2da57ba1a0ec6dd0de05eaf9d63c0707650094447a41c6432e9c7fc2f566",
+    "vendor/three.core.min.js": "7be0e00456c1736162fd6afa07315c13e9ceecbe6247128bfd453efb27585fe7",
+    "vendor/three.module.min.js": "147e8cb8c048718bf9fef1de2b85fe51486edca3391b1bc31760c4af4b898018",
+    "vendor/tw-fade.css": "4aee739d68674c73f7d27fd230505880485148e75a678b164ab7c395b625b20d",
+    "vendor/gsap.min.js": "eac9b46b64763f7e087aa9301f98ad7b1508bd7cb1ea293af38fdb0c304c1f36",
+    "assets/result-05.jpg": "990f1829de8c486dc3a6c3b26133ddea0458b730b4e16bfcb7a3aff4237aab4c",
+    "assets/result-04.jpg": "18743728a091ffb3f95dd13efe13369ed49300372f5bd0982066526fa83f67fa",
+    "assets/ivory-silk.png": "5dbe314bd7919844647e873a9a2e3e55e1b5b2545d7ed54320aa73f51edf1579",
+    "assets/result-01.jpg": "c57e145aaa69e31c682621ed26720c06e1a7db8a1c218f33e71e64b5f6ab3c56",
+    "assets/result-03.jpg": "139b077817cfce484da9c4bb2a493f609256bf2744e1ee1faf54318068002575",
+    "assets/dr-saran-profile.jpg": "78c1db842fdaf2443f16dad989a7ddd982b0eea2b3527e58d94558c96d0a1f6e",
+    "assets/result-02.jpg": "e9381ad51577c22c3b178428c9c983b6c154559fa5443b6fbf40b4d724a98a93",
+    "assets/result-06.jpg": "22c908dbac709beb49c61e9d6f3f7ae173722171694561bdf12f1bca0997dbec",
+    "vendor/lenis/debounce.js": "3972b45a8a25696f04c4e40d7c6ec8b72a9152dc5075ed5ec1f263eb22101c40",
+    "vendor/lenis/lenis.js": "95bc29ef0f468be5b1370f0eb85bb2b50501114b606064a574888566fcc264ab",
+    "vendor/lenis/maths.js": "cf2caeb524a88368236775d0fe76a7737b69aba513c1b8078912f68ee2ef3170",
+    "vendor/lenis/virtual-scroll.js": "ab6fa02cda615be8298f03458ffd810bc7f0f95d1fb4e77f2fa6daa5147d98cc",
+    "vendor/lenis/animate.js": "953b21625982f095a32bbdf33df4bb050b19791bc3ec526e6c19942e82819552",
+    "vendor/lenis/dimensions.js": "0455b8ab8a483b12d0d1283e134dc4a1fa797c663d1cbb4368feeb6b8bb77e61",
+    "vendor/lenis/emitter.js": "cb321cbfd7f8c0ed51938fb5beb629a521d7783d8b75d57532fd64c2cf1b6c4c",
+    "assets/fonts/nimbus-roman-italic.otf": "b7c424e6cb79baddfcdcd9a9d87f9fc4fdd06f0e5160066e2b2e47bcd647c7b9",
+    "assets/fonts/nimbus-roman.otf": "fd41669443616a7ae890c42e53a58f47fa24a940fd1e367acaff665cf5b6e9d8"
+  },
+  "portability_changes": [
+    "Removed the hosting-injected Cloudflare challenge bootstrap from index.html.",
+    "Changed root-relative HTML asset and CSS font URLs to relative paths for subdirectory hosting."
+  ],
+  "notes": "All application JavaScript, vendor modules, image bytes, typography, styles and page content are preserved. The original private development repository was not accessed."
+}
