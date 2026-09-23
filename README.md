@@ -5,6 +5,12 @@ https://wansiri-gender-affirming-care.karndanai537.chatgpt.site/
 
 The original public HTML, CSS, JavaScript, fonts and images were recovered on September 14, 2026. This is editable static source, with no install or build step, backend, API keys, or dependency on the old ChatGPT account.
 
+## Current version
+
+Includes the Tiffany blue palette, additional subtle Tiffany accents, and the supplied surgeon portrait. Exported from the current private preview on September 23, 2026.
+
+Source revision: `abdd290cf0817296f089701f62d010dcf981a5b5`.
+
 ## Preview locally
 
 From this folder:
@@ -15,7 +21,17 @@ python3 -m http.server 8000 --directory dist
 
 Open http://localhost:8000. On Windows, use `py` instead of `python3` if needed. Use an HTTP server rather than double-clicking index.html because the site uses JavaScript modules.
 
-## Push to GitHub
+## Update your existing GitHub repository
+
+Copy the contents of this extracted folder into your existing `wansiri` repository folder, replacing matching files. Do not create another nested `wansiri-website` folder inside the repository. Then run from your repository folder:
+
+```bash
+git add .
+git commit -m "Update Tiffany styling and surgeon portrait"
+git push origin main
+```
+
+## Push to a new GitHub repository
 
 Create an empty repository, open a terminal in this extracted folder, and run:
 
@@ -55,15 +71,15 @@ Reference: [GitHub Pages custom workflows](https://docs.github.com/en/pages/gett
 | `dist/app.js` | Navigation, disclosures, smooth scrolling and animation |
 | `dist/fabric-depth.js` | Original Three.js fabric scene |
 | `dist/fabric-fallback.js` | Original canvas fallback |
-| `dist/assets/` | Original images and both font styles |
+| `dist/assets/` | Site images, the supplied surgeon portrait, and both font styles |
 | `dist/vendor/` | Local GSAP, ScrollTrigger, Lenis and Three.js dependencies |
 
 Keep the `dist` folder tracked: it contains the editable website, not generated build output.
 
 ## Fidelity and provenance
 
-All visible content and styling, including the hospital contact details, clinical-photo disclosure, animations, mobile navigation and reduced-motion behavior, are preserved. The only application-file adjustments are relative asset URLs and removal of the old host's injected Cloudflare challenge bootstrap, which is not part of the website's design or functionality.
+The original layout, page copy, hospital contact details, clinical-photo disclosure, animations, mobile navigation and reduced-motion behavior are preserved. Requested updates add the Tiffany blue palette and accents, replace the visible surgeon portrait with the supplied photo, and adapt its responsive crop. The portable source also uses relative asset URLs and omits the old host's injected Cloudflare challenge bootstrap.
 
-`source-manifest.json` records the original downloaded file hashes and these changes. This package recovers the published website; it does not claim to recover the other account's private repository or development history. The original `noindex,nofollow` metadata is preserved. If search-engine indexing is wanted, change that tag in `dist/index.html`.
+`source-manifest.json` records the original recovery and downloaded file hashes; it predates the Tiffany and portrait updates. This package recovers the published website; it does not claim to recover the other account's private repository or development history. The original `noindex,nofollow` metadata is preserved. If search-engine indexing is wanted, change that tag in `dist/index.html`.
 
 Original asset ownership and embedded third-party license notices remain unchanged. This package does not assign a new license to the hospital materials or vendor code.

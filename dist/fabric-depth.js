@@ -60,11 +60,11 @@ export async function createFabricDepth(host, { gsap, ScrollTrigger, reducedMoti
         vec3 light = normalize(vec3(-1.0 + chapter * 2.0, 0.8 + uPointer.y * 0.15, 1.0));
         float diffuse = max(dot(n, light), 0.0);
         float edge = pow(1.0 - abs(dot(n, normalize(vView))), 2.0);
-        vec3 warm = vec3(0.76, 0.66, 0.51);
-        vec3 pearl = vec3(0.86, 0.86, 0.78);
+        vec3 warm = vec3(0.22, 0.69, 0.63);
+        vec3 pearl = vec3(0.32, 0.82, 0.78);
         vec3 color = mix(warm, pearl, chapter);
         color *= 0.42 + 0.75 * diffuse;
-        color += vec3(0.22, 0.20, 0.16) * edge;
+        color += vec3(0.12, 0.22, 0.20) * edge;
         gl_FragColor = vec4(color, 1.0);
         #include <tonemapping_fragment>
         #include <colorspace_fragment>

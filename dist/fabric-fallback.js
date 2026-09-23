@@ -51,7 +51,7 @@ export class CanvasFabricRenderer {
       if ((b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x) > 0) n.negate();
       const diffuse = Math.max(0, n.dot(light));
       const tone = 0.62 + diffuse * 0.35;
-      const color = [0.76 + chapter * 0.1, 0.66 + chapter * 0.2, 0.51 + chapter * 0.27];
+      const color = [0.22 + chapter * 0.1, 0.69 + chapter * 0.13, 0.63 + chapter * 0.15];
       const rgb = color.map(v => Math.round(Math.pow(v * tone, 1 / 2.2) * 255));
       ctx.fillStyle = ctx.strokeStyle = `rgb(${rgb.join(',')})`;
       ctx.lineWidth = 0.65;
